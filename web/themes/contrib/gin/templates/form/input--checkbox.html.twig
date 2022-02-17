@@ -11,7 +11,6 @@
  * @see claro_preprocess_input()
  */
 #}
-{% spaceless %}
 {% if autocomplete_message %}
   <div class="claro-autocomplete">
     <input{{ attributes }}/>
@@ -20,8 +19,4 @@
   {{ children }}
 {% else %}
   <input{{ attributes }}/>{{ children }}
-  <span class="checkbox-toggle">
-    <span class="checkbox-toggle__inner"></span>
-  </span>
 {% endif %}
-{% endspaceless %}

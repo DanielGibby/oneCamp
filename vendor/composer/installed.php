@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '7bd0039402444d30c31c15b8e60783fdc8f3f715',
+        'reference' => '06f59a33723544e94d0beb38a918de299c8daeed',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -560,12 +560,12 @@
             ),
         ),
         'drupal/gin' => array(
-            'pretty_version' => '3.0.0-alpha27',
-            'version' => '3.0.0.0-alpha27',
+            'pretty_version' => '3.0.0-alpha37',
+            'version' => '3.0.0.0-alpha37',
             'type' => 'drupal-theme',
             'install_path' => __DIR__ . '/../../web/themes/contrib/gin',
             'aliases' => array(),
-            'reference' => '8.x-3.0-alpha27',
+            'reference' => '8.x-3.0-alpha37',
             'dev_requirement' => false,
         ),
         'drupal/gin_login' => array(
@@ -766,7 +766,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '7bd0039402444d30c31c15b8e60783fdc8f3f715',
+            'reference' => '06f59a33723544e94d0beb38a918de299c8daeed',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -1102,8 +1102,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.0',
             ),
         ),
         'psr/event-dispatcher-implementation' => array(

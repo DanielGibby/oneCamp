@@ -26,14 +26,27 @@
     {% for key, tab in tabs %}
       {% set tray = trays[key] %}
       {% set user_menu = tray.links['user_links'] ? 'user-menu' : false %}
-      <div{{ tab.attributes.addClass('toolbar-tab', user_menu, 'toolbar-tab--' ~ tab.link['#id']) }}>
-        {% if tab.link['#id'] == 'toolbar-item-administration' %}
-          <a class="toolbar-menu__logo" href="/admin/content"></a>
-          {{ tab.link }}
+      {% if
+        toolbar_variant != 'classic' and (
+          tab.attributes.id == 'admin-toolbar-search-tab' or
+          tab.attributes.id == 'responsive-preview-toolbar-tab'
+        )
+      %}
+        {# render nothing #}
+      {% else %}
+        {% if tab.attributes.id == 'toolbar-tab-tour' %}
+        <div{{ tab.attributes.addClass('toolbar-tab', user_menu, tab.link['#id'] ? 'toolbar-tab--' ~ tab.link['#id'] : null).removeAttribute('id') }}>
         {% else %}
-          {{ tab.link }}
+        <div{{ tab.attributes.addClass('toolbar-tab', user_menu, tab.link['#id'] ? 'toolbar-tab--' ~ tab.link['#id'] : null) }}>
         {% endif %}
-        {% spaceless %}
+          {% if tab.link['#id'] == 'toolbar-item-administration' %}
+            <a class="toolbar-menu__logo" href="/admin/content" aria-label="{{ 'Toolbar Menu Logo'|t }}">
+              <span class="visually-hidden">{{ 'Toolbar Menu Logo'|t }}</span>
+            </a>
+            {{ tab.link }}
+          {% else %}
+            {{ tab.link }}
+          {% endif %}
           <div{{ tray.attributes }}>
             {% if tray.label %}
               <nav class="toolbar-lining clearfix" role="navigation" aria-label="{{ tray.label }}">
@@ -44,8 +57,8 @@
             {{ tray.links }}
             </nav>
           </div>
-        {% endspaceless %}
-      </div>
+        </div>
+      {% endif %}
     {% endfor %}
   </nav>
   {{ remainder }}
