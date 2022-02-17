@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'a4a18ade6781aa14a9d2701960e295c4c9471aa1',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -123,6 +123,15 @@
             'replaced' => array(
                 0 => '9.3.6',
             ),
+        ),
+        'drupal/bootstrap5' => array(
+            'pretty_version' => '1.1.3',
+            'version' => '1.1.3.0',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../web/themes/contrib/bootstrap5',
+            'aliases' => array(),
+            'reference' => '1.1.3',
+            'dev_requirement' => false,
         ),
         'drupal/breakpoint' => array(
             'dev_requirement' => false,
@@ -451,6 +460,33 @@
                 0 => '9.3.6',
             ),
         ),
+        'drupal/gin' => array(
+            'pretty_version' => '3.0.0-alpha27',
+            'version' => '3.0.0.0-alpha27',
+            'type' => 'drupal-theme',
+            'install_path' => __DIR__ . '/../../web/themes/contrib/gin',
+            'aliases' => array(),
+            'reference' => '8.x-3.0-alpha27',
+            'dev_requirement' => false,
+        ),
+        'drupal/gin_login' => array(
+            'pretty_version' => '1.0.0',
+            'version' => '1.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/gin_login',
+            'aliases' => array(),
+            'reference' => '8.x-1.0',
+            'dev_requirement' => false,
+        ),
+        'drupal/gin_toolbar' => array(
+            'pretty_version' => '1.0.0-beta20',
+            'version' => '1.0.0.0-beta20',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/gin_toolbar',
+            'aliases' => array(),
+            'reference' => '8.x-1.0-beta20',
+            'dev_requirement' => false,
+        ),
         'drupal/hal' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -626,12 +662,12 @@
             ),
         ),
         'drupal/recommended-project' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'a4a18ade6781aa14a9d2701960e295c4c9471aa1',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(

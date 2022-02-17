@@ -16,8 +16,12 @@
     ],
     "require": {
         "composer/installers": "^1.9",
+        "drupal/bootstrap5": "^1.1",
         "drupal/core-composer-scaffold": "^9.3",
-        "drupal/core-recommended": "^9.3"
+        "drupal/core-recommended": "^9.3",
+        "drupal/gin": "^3.0@alpha",
+        "drupal/gin_login": "^1.0",
+        "drupal/gin_toolbar": "^1.0@beta"
     },
     "conflict": {
         "drupal/drupal": "*"
