@@ -25,6 +25,7 @@
         "drupal/core-composer-scaffold": "^9.3",
         "drupal/core-recommended": "^9.3",
         "drupal/field_group": "^3.2",
+        "drupal/field_permissions": "^1.1",
         "drupal/fontawesome": "^2.19",
         "drupal/fullcalendar_view": "^5.1",
         "drupal/gin": "^3.0-alpha34",
