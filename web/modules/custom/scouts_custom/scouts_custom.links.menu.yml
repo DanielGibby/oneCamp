@@ -1,0 +1,7 @@
+scouts.admin_index:
+  title: Scouts Custom Modules
+  route_name: scouts.admin_index
+  parent: system.admin_config
+  description: 'Custom modules developed for Scouts.'
+  position: left
+  weight: -20

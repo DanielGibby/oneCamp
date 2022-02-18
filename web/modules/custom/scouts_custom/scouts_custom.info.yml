@@ -1,0 +1,6 @@
+name: Scouts Custom Modules
+type: module
+description: 'Container for the Custom Modules developed for Scouts.'
+package: Scouts Custom
+core_version_requirement: ^8.8 || ^9
+configure: scouts_custom.form

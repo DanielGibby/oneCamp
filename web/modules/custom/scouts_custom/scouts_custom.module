@@ -1,0 +1,197 @@
+<?php
+
+/**
+ * @file
+ * Contains scouts_custom.module
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function scouts_custom_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.scouts_custom':
+      return t('
+        <h2>Help page for the Scouts Custom module</h2>
+        <h3>Instructions</h3>
+      ');
+  }
+}
+
+function scouts_custom_get_current_user()
+{
+  $current_user = \Drupal::currentUser();
+  $roles = $current_user->getRoles();
+}
+
+/**
+ * Implements preprocess_page_title().
+ */
+function scouts_custom_preprocess_page_title(&$variables)
+{
+  // Only process this if we are on a users page.
+  if (\Drupal::routeMatch()->getParameter('user')) {
+    $user_page = \Drupal::routeMatch()->getParameter('user');
+    $first_name = $user_page->get('field_first_name')->getValue()[0]['value'];
+    $last_name = $user_page->get('field_last_name')->getValue()[0]['value'];
+    $variables['title'] = $first_name . ' ' . $last_name;
+  }
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function scouts_custom_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
+{
+  switch ($entity->bundle()) {
+      // Here you modify only your day content type
+    case 'maintenance_request':
+      // Setting the title with the value of field_date.
+
+      break;
+  }
+}
+
+/**
+ * Implements hook_mail_alter().
+ */
+function scouts_custom_mail_alter(&$message)
+{
+  $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+}
+
+/**
+ * Implements hook_mail().
+ */
+function scouts_custom_mail($key, &$message, $params)
+{
+  $options = array(
+    'langcode' => $message['langcode'],
+  );
+  switch ($key) {
+    case 'maintenance_job_created':
+      $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
+      $message['from'] = \Drupal::config('system.site')->get('mail');
+      $message['subject'] = t('General mail: @subject', ['@subject' => $params['subject']], $options);
+      $message['body'][] = $params['message'];
+      break;
+  }
+}
+
+/**
+ * Implements hook_entity_insert().
+ */
+function scouts_custom_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
+{
+
+  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'maintenance_request')) {
+    return;
+  }
+
+  $mailManager = \Drupal::service('plugin.manager.mail');
+  $module = 'scouts_custom';
+  $key = 'maintenance_job_created';
+  $to = 'dan.gibby@gmail.com';
+  $params['message'] = '<html><body><b><a href="https://portal-onecamp.com/">Message</a></b></body></html>';
+  $params['node_title'] = $entity->label();
+  $langcode = \Drupal::currentUser()->getPreferredLangcode();
+  $send = true;
+
+  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+  if ($result['result'] !== true) {
+    //drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
+  } else {
+    //drupal_set_message(t('Your message has been sent.'));
+  }
+}
+
+
+/**
+ * Implements preprocess_node().
+ */
+function scouts_custom_preprocess_node(&$variables)
+{
+  //dump(\Drupal::routeMatch());
+
+  $show_event_register_option = false;
+
+  if (\Drupal::routeMatch()->getParameter('node')) {
+    if ($variables['node']->bundle() == 'event') {
+      // only do this on an actual event page.
+      $show_event_register_option = true;
+      $node = $variables['node'];
+
+      $waitlist = false;
+
+      $who_is_waiting = $node->get('field_waitlist')->getValue();
+      $user = \Drupal::currentUser()->id();
+      foreach ($who_is_waiting as $check) {
+        if ($check['target_id'] == $user) {
+          $waitlist = true;
+        }
+      }
+
+      $accepted_role = false;
+      $current_roles = \Drupal::currentUser()->getRoles();
+      foreach (\Drupal::currentUser()->getRoles() as $role_check) {
+        if (strtolower($role_check) == 'youth_member') {
+          $accepted_role = true;
+        }
+      }
+
+      $section_check = false;
+      $user = \Drupal\user\Entity\User::load(\Drupal::currentUser()->id());
+      //dump($node->get('field_who_can_attend')->getValue());
+      //dump($user->get('field_section')->getValue());
+      if ($user->get('field_section')->getValue()) {
+        foreach ($node->get('field_who_can_attend')->getValue() as $section) {
+          if ($section['target_id'] == $user->get('field_section')->getValue()[0]['target_id']) {
+            $section_check = true;
+          }
+        }
+      }
+
+      $content_array = [
+        'is_on_wait_list' => $waitlist,
+        'who_is_waiting' => $who_is_waiting,
+        'user' => $user,
+        'current_roles' => $current_roles,
+        'accepted_role' => $accepted_role,
+        'section_check' => $section_check,
+        'show_event_register_option' => $show_event_register_option,
+      ];
+
+      $variables['render_content'] = $content_array;
+
+      //dump($variables['render_content']);
+    }
+  }
+  $variables['show_event_register_option'] = $show_event_register_option;
+}
+
+/**
+ * Implements preprocess_page().
+ */
+function scouts_custom_preprocess_page(&$variables)
+{
+  // Only process this if we are on a users page.
+  if (\Drupal::routeMatch()->getParameter('user')) {
+    $user_page = \Drupal::routeMatch()->getParameter('user');
+
+    //dump($user_page->get('field_qr_code')->getValue());
+    $dob = explode('-', $user_page->get('field_date_of_birth')->getValue()[0]['value']);
+
+    $user_details = [
+      'first_name' => $user_page->get('field_first_name')->getValue()[0]['value'],
+      'last_name' => $user_page->get('field_last_name')->getValue()[0]['value'],
+      'member_number' => $user_page->get('field_membership_number')->getValue()[0]['value'],
+      'dob' => $dob[2] . '/' . $dob[1] . '/' . $dob[0],
+    ];
+
+    //dump($user_details['dob']);
+    $variables['user_details'] = $user_details;
+  }
+}

@@ -1,0 +1,14 @@
+scouts.admin_index:
+  path: '/admin/config/scouts'
+  defaults:
+    _controller: '\Drupal\system\Controller\SystemController::systemAdminMenuBlockPage'
+    _title: 'Scouts custom modules'
+  requirements:
+    _permission: 'access administration pages'
+
+scouts.scouts_handle_ajax:
+  path: 'handle-ajax-calls'
+  defaults:
+    _controller: '\Drupal\scouts_custom\Controller\handleAjax::Render'
+  requirements:
+    _access: 'TRUE'
