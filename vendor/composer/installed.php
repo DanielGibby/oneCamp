@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '3d3b8f1c135db44a3ea868292ef2cfef557f6614',
+        'reference' => 'e179ed8a360a13978e4c6982375d3d07e3e63ec8',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -210,6 +210,15 @@
             'replaced' => array(
                 0 => '9.3.6',
             ),
+        ),
+        'drupal/anonymous_login' => array(
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/anonymous_login',
+            'aliases' => array(),
+            'reference' => '8.x-2.0',
+            'dev_requirement' => false,
         ),
         'drupal/antibot' => array(
             'pretty_version' => '1.5.0',
@@ -928,7 +937,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '3d3b8f1c135db44a3ea868292ef2cfef557f6614',
+            'reference' => 'e179ed8a360a13978e4c6982375d3d07e3e63ec8',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
