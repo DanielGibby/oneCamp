@@ -1,0 +1,8 @@
+uuid: bb4853a5-c2ec-4439-b69d-13082621feae
+langcode: en
+status: true
+dependencies: {  }
+name: District
+vid: district
+description: 'A complete list of Scout Districts'
+weight: 0

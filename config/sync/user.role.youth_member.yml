@@ -1,0 +1,9 @@
+uuid: 6b1a9e13-de99-414b-b178-590825f6aa4e
+langcode: en
+status: true
+dependencies: {  }
+id: youth_member
+label: 'Youth Member'
+weight: 6
+is_admin: null
+permissions: {  }

@@ -1,0 +1,22 @@
+uuid: d3da48cb-4769-4935-89d2-74367bd433cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - scouts
+_core:
+  default_config_hash: S0Y16qIQfKiOEzWlddOGk3u_BKwAruAheA8VVFfGbLc
+id: scouts_help
+theme: scouts
+region: content
+weight: -3
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  label_display: '0'
+  provider: help
+visibility: {  }

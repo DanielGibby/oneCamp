@@ -1,0 +1,14 @@
+uuid: 97cf7a65-71bc-4daa-a46e-7b3a0995292f
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.youth_member
+  module:
+    - user
+id: user_remove_role_action.youth_member
+label: 'Remove the Youth Member role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: youth_member

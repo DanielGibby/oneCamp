@@ -1,0 +1,21 @@
+uuid: 9759c6ef-27b7-4a0a-a18a-fd1acddd26ef
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_condition
+    - paragraphs.paragraphs_type.known_medical_conditions
+  module:
+    - options
+id: paragraph.known_medical_conditions.field_condition
+field_name: field_condition
+entity_type: paragraph
+bundle: known_medical_conditions
+label: Condition
+description: 'If the condition is not listed here, please provide details in the text below.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

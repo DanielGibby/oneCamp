@@ -220,7 +220,8 @@ $databases = [];
  * directory in the public files path. The setting below allows you to set
  * its location.
  */
-# $settings['config_sync_directory'] = '/directory/outside/webroot';
+
+ $settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -705,6 +706,11 @@ $settings['container_yamls'][] = $app_root . '/' . $site_path . '/services.yml';
  * example.org, with all subdomains included.
  */
 
+$settings['trusted_host_patterns'] = array(
+  '^www\.portal-onecamp\.com$',
+  'onecamp.local',
+);
+
 /**
  * The default list of directories that will be ignored by Drupal's file API.
  *
@@ -779,4 +785,3 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_Qc9s24BI8ct7VSCsYJXi1YBXnzGNeCtyFEoYedoPWrkVMTuG5tJ5sIoyvrOy6KrAIkQ4GnlkPQ/sync';

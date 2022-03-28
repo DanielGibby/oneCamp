@@ -1,0 +1,39 @@
+uuid: 4ac04a7a-5d6d-4917-8513-5253ab7e7d93
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.groups.field_district
+    - field.field.taxonomy_term.groups.field_region
+    - taxonomy.vocabulary.groups
+  module:
+    - text
+id: taxonomy_term.groups.default
+targetEntityType: taxonomy_term
+bundle: groups
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_district:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_region:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

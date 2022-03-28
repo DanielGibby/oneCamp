@@ -1,0 +1,22 @@
+uuid: 64588e6e-6128-482d-b83b-30e3c4d3c605
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: sections
+label: Sections
+type: 'canonical_entities:taxonomy_term'
+pattern: 'admin/sections/[term:name]'
+selection_criteria:
+  ad8d584a-c151-4d0e-b93e-d0d828f003b6:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: ad8d584a-c151-4d0e-b93e-d0d828f003b6
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      sections: sections
+selection_logic: and
+weight: -5
+relationships: {  }

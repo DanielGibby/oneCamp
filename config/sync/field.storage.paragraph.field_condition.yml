@@ -1,0 +1,78 @@
+uuid: 4d328fcc-29ca-4b9e-a80f-79a7869d51f7
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_condition
+field_name: field_condition
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: ADHD
+      label: ADHD
+    -
+      value: Arthritis
+      label: Arthritis
+    -
+      value: Aspergers
+      label: Aspergers
+    -
+      value: Asthma
+      label: Asthma
+    -
+      value: Back_Problems
+      label: 'Back Problems'
+    -
+      value: Bed_Wetting
+      label: 'Bed Wetting'
+    -
+      value: Blood_Pressure
+      label: 'Blood Pressure'
+    -
+      value: Diabetes
+      label: Diabetes
+    -
+      value: Ear_Infections
+      label: 'Ear Infections'
+    -
+      value: Epilepsy
+      label: Epilepsy
+    -
+      value: Hay_fever
+      label: 'Hay fever'
+    -
+      value: Hearing_Disorders
+      label: 'Hearing Disorders'
+    -
+      value: Heart_trouble
+      label: 'Heart trouble'
+    -
+      value: Intellectual_Disability
+      label: 'Intellectual Disability'
+    -
+      value: Migraine
+      label: Migraine
+    -
+      value: Sleep_Apnoea
+      label: 'Sleep Apnoea'
+    -
+      value: Sleep_Walking
+      label: 'Sleep Walking'
+    -
+      value: Visual_Impairment
+      label: 'Visual Impairment'
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

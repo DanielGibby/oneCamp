@@ -1,0 +1,14 @@
+uuid: 65e165c4-f6cc-4cf7-bbd4-3b2dbf58431d
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.maintenance
+  module:
+    - user
+id: user_remove_role_action.maintenance
+label: 'Remove the Maintenance role from the selected user(s)'
+type: user
+plugin: user_remove_role_action
+configuration:
+  rid: maintenance

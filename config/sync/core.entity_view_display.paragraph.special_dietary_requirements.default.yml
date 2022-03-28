@@ -1,0 +1,31 @@
+uuid: ee37650b-fe48-4e56-afc8-ead0a084083b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.special_dietary_requirements.field_details
+    - field.field.paragraph.special_dietary_requirements.field_diets
+    - paragraphs.paragraphs_type.special_dietary_requirements
+  module:
+    - options
+    - text
+id: paragraph.special_dietary_requirements.default
+targetEntityType: paragraph
+bundle: special_dietary_requirements
+mode: default
+content:
+  field_details:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_diets:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden: {  }

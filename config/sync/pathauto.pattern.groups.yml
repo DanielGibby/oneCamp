@@ -1,0 +1,22 @@
+uuid: c5ad285e-defd-490f-8009-8c8dffdda922
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: groups
+label: Groups
+type: 'canonical_entities:taxonomy_term'
+pattern: 'admin/[term:field_region]/[term:field_district]/[term:name]'
+selection_criteria:
+  75fa1b6b-211b-4e52-bc3d-0ee6a8c87872:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 75fa1b6b-211b-4e52-bc3d-0ee6a8c87872
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      groups: groups
+selection_logic: and
+weight: -5
+relationships: {  }

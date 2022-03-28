@@ -1,0 +1,39 @@
+uuid: 9d447002-3004-4fbd-b3e0-c5eca4581cce
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.known_medical_conditions.field_condition
+    - field.field.paragraph.known_medical_conditions.field_details
+    - paragraphs.paragraphs_type.known_medical_conditions
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.known_medical_conditions.default
+targetEntityType: paragraph
+bundle: known_medical_conditions
+mode: default
+content:
+  field_condition:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_details:
+    type: text_textarea
+    weight: 0
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

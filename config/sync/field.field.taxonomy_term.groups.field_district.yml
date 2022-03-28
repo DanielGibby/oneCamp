@@ -1,0 +1,29 @@
+uuid: a4259c01-6b29-4745-ad60-b5c8ccff8c26
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_district
+    - taxonomy.vocabulary.district
+    - taxonomy.vocabulary.groups
+id: taxonomy_term.groups.field_district
+field_name: field_district
+entity_type: taxonomy_term
+bundle: groups
+label: District
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      district: district
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

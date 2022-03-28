@@ -1,0 +1,21 @@
+uuid: 55f0e7f7-c4ab-452f-ae4d-d13cdf8fc154
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_details
+    - paragraphs.paragraphs_type.known_medical_conditions
+  module:
+    - text
+id: paragraph.known_medical_conditions.field_details
+field_name: field_details
+entity_type: paragraph
+bundle: known_medical_conditions
+label: Details
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

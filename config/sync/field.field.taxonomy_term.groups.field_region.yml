@@ -1,0 +1,29 @@
+uuid: 988e9f8f-264e-4dd9-add1-f3f8d0a30f4c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_region
+    - taxonomy.vocabulary.groups
+    - taxonomy.vocabulary.regions
+id: taxonomy_term.groups.field_region
+field_name: field_region
+entity_type: taxonomy_term
+bundle: groups
+label: Region
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      regions: regions
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

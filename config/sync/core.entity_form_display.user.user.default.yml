@@ -1,0 +1,326 @@
+uuid: 05d7d693-7712-4e9e-a4a0-12f76d195ab9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.user.user.field_additional_information
+    - field.field.user.user.field_address
+    - field.field.user.user.field_contact_number
+    - field.field.user.user.field_date_of_birth
+    - field.field.user.user.field_district
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_group
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_membership_number
+    - field.field.user.user.field_middle_name
+    - field.field.user.user.field_qr_code
+    - field.field.user.user.field_region
+    - field.field.user.user.field_section
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - address
+    - chosen_field
+    - datetime
+    - field_group
+    - field_layout
+    - image
+    - layout_discovery
+    - paragraphs
+    - qrfield
+    - telephone
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  field_group:
+    group_admin_use_only:
+      children:
+        - group_user_details
+        - group_qr_code
+      label: 'Admin use only'
+      region: content
+      parent_name: ''
+      weight: 3
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_user_details:
+      children:
+        - account
+      label: 'User Details'
+      region: content
+      parent_name: group_admin_use_only
+      weight: 3
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_scout_details:
+      children:
+        - field_membership_number
+        - field_section
+        - field_group
+        - field_district
+        - field_region
+      label: 'Scout Details'
+      region: content
+      parent_name: group_details
+      weight: 15
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_details:
+      children:
+        - group_personal_information
+        - group_contact_information
+        - group_scout_details
+        - group_picture
+      label: Details
+      region: content
+      parent_name: ''
+      weight: 1
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_personal_information:
+      children:
+        - field_first_name
+        - field_middle_name
+        - field_last_name
+        - field_date_of_birth
+      label: 'Personal Information'
+      region: content
+      parent_name: group_details
+      weight: 13
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_picture:
+      children:
+        - user_picture
+      label: Picture
+      region: content
+      parent_name: group_details
+      weight: 16
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_qr_code:
+      children:
+        - field_qr_code
+      label: 'QR Code'
+      region: content
+      parent_name: group_admin_use_only
+      weight: 5
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_user_input:
+      children:
+        - group_additional_information
+      label: 'User input'
+      region: content
+      parent_name: ''
+      weight: 2
+      format_type: tabs
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        direction: vertical
+        width_breakpoint: 640
+    group_additional_information:
+      children:
+        - field_additional_information
+      label: 'Additional Information'
+      region: content
+      parent_name: group_user_input
+      weight: 20
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+    group_contact_information:
+      children:
+        - field_contact_number
+        - field_address
+      label: 'Contact Information'
+      region: content
+      parent_name: group_details
+      weight: 14
+      format_type: tab
+      format_settings:
+        classes: ''
+        show_empty_fields: false
+        id: ''
+        formatter: closed
+        description: ''
+        required_fields: true
+_core:
+  default_config_hash: FaQ9Ptcpxpg30AtiqRDtl_8zbJArHP1LPfug_s59TOA
+id: user.user.default
+targetEntityType: user
+bundle: user
+mode: default
+content:
+  account:
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_additional_information:
+    type: paragraphs
+    weight: 0
+    region: content
+    settings:
+      title: 'Additional Information'
+      title_plural: 'Add Additional Information'
+      edit_mode: open
+      closed_mode: summary
+      autocollapse: none
+      closed_mode_threshold: 0
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: _none
+      features:
+        add_above: '0'
+        collapse_edit_all: collapse_edit_all
+        duplicate: duplicate
+    third_party_settings: {  }
+  field_address:
+    type: address_default
+    weight: 8
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_contact_number:
+    type: telephone_default
+    weight: 7
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_date_of_birth:
+    type: datetime_default
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_district:
+    type: chosen_select
+    weight: 11
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_first_name:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_group:
+    type: chosen_select
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_last_name:
+    type: string_textfield
+    weight: 5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_membership_number:
+    type: string_textfield
+    weight: 8
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_middle_name:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_qr_code:
+    type: qrfield_widget
+    weight: 10
+    region: content
+    settings:
+      text: 'Enter you QR text here (e.g.: Welcome to [site:name] [site:url])'
+      image:
+        width: 100
+        height: 100
+    third_party_settings: {  }
+  field_region:
+    type: chosen_select
+    weight: 12
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_section:
+    type: chosen_select
+    weight: 9
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  user_picture:
+    type: image_image
+    weight: 8
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+hidden:
+  contact: true
+  language: true
+  path: true
+  timezone: true

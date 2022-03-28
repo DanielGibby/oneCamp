@@ -1,0 +1,7 @@
+scouts_maintenance.admin_index:
+  path: '/admin/config/scouts/maintenance'
+  defaults:
+    _form: '\Drupal\scouts_maintenance\Form\ScoutsMaintenance'
+    _title: 'Scouts Maintenance Module'
+  requirements:
+    _permission: 'access administration pages'

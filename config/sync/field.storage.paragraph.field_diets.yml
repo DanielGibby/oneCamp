@@ -1,0 +1,57 @@
+uuid: 11889ba7-67ea-45f9-965f-debc29b68f64
+langcode: en
+status: true
+dependencies:
+  module:
+    - options
+    - paragraphs
+id: paragraph.field_diets
+field_name: field_diets
+entity_type: paragraph
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Gluten_free_Coeliac
+      label: 'Gluten free / Coeliac'
+    -
+      value: Halal
+      label: Halal
+    -
+      value: Hindu
+      label: Hindu
+    -
+      value: Kosher
+      label: Kosher
+    -
+      value: No_Dairy
+      label: 'No Dairy'
+    -
+      value: No_Egg_Product
+      label: 'No Egg Product'
+    -
+      value: No_Lactose
+      label: 'No Lactose'
+    -
+      value: No_Seafood
+      label: 'No Seafood'
+    -
+      value: Nut_Free
+      label: 'Nut Free'
+    -
+      value: Vegan
+      label: Vegan
+    -
+      value: Vegetarian
+      label: Vegetarian
+    -
+      value: Other
+      label: Other
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

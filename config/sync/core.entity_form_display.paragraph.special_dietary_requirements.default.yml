@@ -1,0 +1,39 @@
+uuid: 8c3b3c7a-9515-48f0-b267-38e0173f403b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.special_dietary_requirements.field_details
+    - field.field.paragraph.special_dietary_requirements.field_diets
+    - paragraphs.paragraphs_type.special_dietary_requirements
+  module:
+    - field_layout
+    - layout_discovery
+    - text
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+id: paragraph.special_dietary_requirements.default
+targetEntityType: paragraph
+bundle: special_dietary_requirements
+mode: default
+content:
+  field_details:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_diets:
+    type: options_select
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

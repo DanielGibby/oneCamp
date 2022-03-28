@@ -1,0 +1,22 @@
+uuid: 42ea027a-7ffe-4cb5-ab8b-1c571d9e2cb4
+langcode: en
+status: true
+dependencies:
+  theme:
+    - scouts
+_core:
+  default_config_hash: yX9o6NcntZnXRDfbJoHY1pJwuXlumW44m5AMs347NN4
+id: scouts_local_tasks
+theme: scouts
+region: content
+weight: -4
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: true
+visibility: {  }

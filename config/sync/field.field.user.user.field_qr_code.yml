@@ -1,0 +1,24 @@
+uuid: 4245e056-6760-4f68-88e5-86d2eaa1f568
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_qr_code
+  module:
+    - qrfield
+    - user
+id: user.user.field_qr_code
+field_name: field_qr_code
+entity_type: user
+bundle: user
+label: 'QR Code'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    text: '[user:field_membership_number]'
+default_value_callback: ''
+settings:
+  qrcode_plugin: gchart
+field_type: qrfield

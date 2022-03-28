@@ -1,0 +1,24 @@
+_core:
+  default_config_hash: CEHTCpo0zzrZOJNa9_M2R_HdYKrq3v1zlRVCf66hh7U
+favicon:
+  mimetype: image/png
+  path: 'public://one-camp-logo_1.png'
+  use_default: false
+features:
+  comment_user_picture: true
+  comment_user_verification: true
+  favicon: true
+  node_user_picture: true
+third_party_settings:
+  shortcut:
+    module_link: true
+preset_accent_color: custom
+preset_focus_color: gin
+enable_darkmode: false
+classic_toolbar: horizontal
+icon_default: false
+icon_path: 'public://one-camp-logo_1.png'
+high_contrast_mode: false
+accent_color: '#331a57'
+focus_color: ''
+icon_upload: ''

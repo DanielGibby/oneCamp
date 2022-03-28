@@ -1,0 +1,21 @@
+uuid: 29b47c74-c4a7-45a9-8ba1-faa8da3224fa
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_diets
+    - paragraphs.paragraphs_type.special_dietary_requirements
+  module:
+    - options
+id: paragraph.special_dietary_requirements.field_diets
+field_name: field_diets
+entity_type: paragraph
+bundle: special_dietary_requirements
+label: Diets
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

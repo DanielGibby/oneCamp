@@ -1,0 +1,8 @@
+uuid: 4b5534c2-77c4-4738-8e43-838a13f24e05
+langcode: en
+status: true
+dependencies: {  }
+name: Groups
+vid: groups
+description: 'A complete list of Scout Groups'
+weight: 0

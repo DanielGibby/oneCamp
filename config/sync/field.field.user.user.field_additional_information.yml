@@ -1,0 +1,36 @@
+uuid: e672464c-be76-463b-8b74-647d7fc455cc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.user.field_additional_information
+    - paragraphs.paragraphs_type.known_medical_conditions
+    - paragraphs.paragraphs_type.special_dietary_requirements
+  module:
+    - entity_reference_revisions
+    - user
+id: user.user.field_additional_information
+field_name: field_additional_information
+entity_type: user
+bundle: user
+label: 'Additional Information'
+description: 'Add any additional information that might be required for this user. Please select the drop down arrow to go through all additional information options and add as needed.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      special_dietary_requirements: special_dietary_requirements
+      known_medical_conditions: known_medical_conditions
+    negate: 0
+    target_bundles_drag_drop:
+      known_medical_conditions:
+        weight: 3
+        enabled: true
+      special_dietary_requirements:
+        weight: 2
+        enabled: true
+field_type: entity_reference_revisions

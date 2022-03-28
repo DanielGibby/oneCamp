@@ -1,0 +1,8 @@
+uuid: 1f5bc745-2b69-4e0e-9f2d-ad232c523c4a
+langcode: en
+status: true
+dependencies: {  }
+name: Regions
+vid: regions
+description: 'A complete list of Scout Regions'
+weight: 0

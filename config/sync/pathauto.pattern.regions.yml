@@ -1,0 +1,22 @@
+uuid: ad16d89d-c53c-46d6-84be-2e81f269060b
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: regions
+label: Regions
+type: 'canonical_entities:taxonomy_term'
+pattern: 'admin/[term:name]'
+selection_criteria:
+  e31ba037-9ca7-4778-af94-f8711aa401be:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: e31ba037-9ca7-4778-af94-f8711aa401be
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      regions: regions
+selection_logic: and
+weight: -5
+relationships: {  }

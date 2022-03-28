@@ -1,0 +1,11 @@
+uuid: 1b4a4e4e-a4e5-46d2-841d-bd749aecc540
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: ByhqbPXnGF-YHV1kpgNqygXIzhk3ad0_NiwBH3zA45s
+id: maintenance
+label: Maintenance
+weight: 9
+is_admin: null
+permissions: {  }

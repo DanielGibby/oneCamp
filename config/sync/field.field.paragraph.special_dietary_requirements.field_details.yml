@@ -1,0 +1,21 @@
+uuid: ad5b320d-33ce-435f-9184-4e54d4778bc6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_details
+    - paragraphs.paragraphs_type.special_dietary_requirements
+  module:
+    - text
+id: paragraph.special_dietary_requirements.field_details
+field_name: field_details
+entity_type: paragraph
+bundle: special_dietary_requirements
+label: Details
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long
