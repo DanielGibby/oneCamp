@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => 'd4af693bfa5a211d123812b4b22cda90bec99840',
+        'reference' => '38e7181e8cedac9744810724aed6872bf944c07b',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -221,12 +221,12 @@
             'dev_requirement' => false,
         ),
         'drupal/antibot' => array(
-            'pretty_version' => '1.5.0',
-            'version' => '1.5.0.0',
+            'pretty_version' => '2.0.0',
+            'version' => '2.0.0.0',
             'type' => 'drupal-module',
             'install_path' => __DIR__ . '/../../web/modules/contrib/antibot',
             'aliases' => array(),
-            'reference' => '8.x-1.5',
+            'reference' => '2.0.0',
             'dev_requirement' => false,
         ),
         'drupal/automated_cron' => array(
@@ -937,7 +937,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => 'd4af693bfa5a211d123812b4b22cda90bec99840',
+            'reference' => '38e7181e8cedac9744810724aed6872bf944c07b',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(
@@ -1309,8 +1309,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.0',
             ),
         ),
         'psr/event-dispatcher-implementation' => array(

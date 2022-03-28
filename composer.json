@@ -19,7 +19,7 @@
         "drupal/address": "^1.10",
         "drupal/admin_toolbar": "^3.1",
         "drupal/anonymous_login": "^2.0",
-        "drupal/antibot": "^1.5",
+        "drupal/antibot": "^2.0",
         "drupal/blazy": "^2.6",
         "drupal/bootstrap5": "^1.1",
         "drupal/chosen": "^3.0",
