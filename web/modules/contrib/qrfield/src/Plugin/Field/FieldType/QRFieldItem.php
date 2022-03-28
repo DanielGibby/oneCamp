@@ -15,7 +15,7 @@ use Drupal\Core\TypedData\DataDefinition;
  *   label = @Translation("QR field"),
  *   description = @Translation("Field for generating QR codes from content entity."),
  *   default_widget = "qrfield_widget",
- *   default_formatter = "string"
+ *   default_formatter = "qrfield_formatter"
  * )
  */
 class QRFieldItem extends FieldItemBase {

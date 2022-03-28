@@ -141,6 +141,7 @@ class ComposerStaticInite0c8d7a6216ee9b56a8d10a602003740
             'Doctrine\\Common\\Collections\\' => 28,
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
+            'Dflydev\\DotAccessData\\' => 22,
         ),
         'C' => 
         array (
@@ -431,6 +432,10 @@ class ComposerStaticInite0c8d7a6216ee9b56a8d10a602003740
         array (
             0 => __DIR__ . '/..' . '/doctrine/reflection/lib/Doctrine/Common',
         ),
+        'Dflydev\\DotAccessData\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
+        ),
         'Consolidation\\SiteProcess\\' => 
         array (
             0 => __DIR__ . '/..' . '/consolidation/site-process/src',
@@ -490,13 +495,6 @@ class ComposerStaticInite0c8d7a6216ee9b56a8d10a602003740
             'Stack' => 
             array (
                 0 => __DIR__ . '/..' . '/stack/builder/src',
-            ),
-        ),
-        'D' => 
-        array (
-            'Dflydev\\DotAccessData' => 
-            array (
-                0 => __DIR__ . '/..' . '/dflydev/dot-access-data/src',
             ),
         ),
         'C' => 
