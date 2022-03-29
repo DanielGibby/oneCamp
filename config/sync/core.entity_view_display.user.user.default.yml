@@ -26,6 +26,7 @@ dependencies:
     - image
     - layout_builder
     - qrfield
+    - telephone
     - user
 third_party_settings:
   field_layout:
@@ -59,9 +60,10 @@ content:
     weight: 16
     region: content
   field_contact_number:
-    type: basic_string
+    type: telephone_link
     label: above
-    settings: {  }
+    settings:
+      title: ''
     third_party_settings: {  }
     weight: 15
     region: content

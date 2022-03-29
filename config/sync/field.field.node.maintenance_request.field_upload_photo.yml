@@ -1,0 +1,29 @@
+uuid: 1c9081e0-9de1-417c-83f8-e696446c1c21
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_upload_photo
+    - media.type.maintenance_issue_photos
+    - node.type.maintenance_request
+id: node.maintenance_request.field_upload_photo
+field_name: field_upload_photo
+entity_type: node
+bundle: maintenance_request
+label: 'Upload photo'
+description: 'If it will help, please upload a photo showing the issue.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      maintenance_issue_photos: maintenance_issue_photos
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: image
+field_type: entity_reference

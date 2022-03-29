@@ -1,0 +1,8 @@
+color_picker:
+  css:
+    theme:
+      css/color_picker.css: {}
+  js:
+    js/color_picker.js: {}
+  dependencies:
+    - core/jquery

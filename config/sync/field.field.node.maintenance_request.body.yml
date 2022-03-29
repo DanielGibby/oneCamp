@@ -1,0 +1,23 @@
+uuid: 6026b594-14b2-4e83-b0cd-fe5e1e9d1ac6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.maintenance_request
+  module:
+    - text
+id: node.maintenance_request.body
+field_name: body
+entity_type: node
+bundle: maintenance_request
+label: Issue
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+  required_summary: false
+field_type: text_with_summary

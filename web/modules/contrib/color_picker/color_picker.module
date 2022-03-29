@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * @file
+ * Contains color_picker.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function color_picker_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the color_picker module.
+    case 'help.page.color_picker':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Provides a FormElement for a color picker that can be used via the Forms API.') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+/**
+ * Implements hook_theme().
+ */
+function color_picker_theme() {
+  return [
+    'color_picker' => [
+      'render element' => 'children',
+    ],
+  ];
+}
+
+/**
+ * Prepares variables for checkboxes templates.
+ *
+ * Default template: checkboxes.html.twig.
+ *
+ * @param array $variables
+ *   An associative array containing:
+ *   - element: An associative array containing the properties of the element.
+ *     Properties used: #children, #attributes.
+ */
+function color_picker_preprocess_color_picker(&$variables) {
+  if (isset($variables['attributes']['color_values'])) {
+    $variables['attributes']['data-color-values'] = $variables['attributes']['color_values'];
+    unset($variables['attributes']['color_values']);
+  }
+}

@@ -1,0 +1,6 @@
+name: Scouts Maintenance Module
+type: module
+description: 'Controls the functions and features for maintenance issues.'
+package: Scouts Custom
+core_version_requirement: ^8.8 || ^9
+configure: scouts_maintenance.form

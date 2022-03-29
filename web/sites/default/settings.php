@@ -221,7 +221,7 @@ $databases = [];
  * its location.
  */
 
- $settings['config_sync_directory'] = '../config/sync';
+$settings['config_sync_directory'] = '../config/sync';
 
 /**
  * Settings:
@@ -772,10 +772,11 @@ $settings['migrate_node_migrate_type_classic'] = FALSE;
  * Keep this code block at the end of this file to take full effect.
  */
 #
-# if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
-#   include $app_root . '/' . $site_path . '/settings.local.php';
-# }
-$databases['default']['default'] = array (
+if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
+  include $app_root . '/' . $site_path . '/settings.local.php';
+}
+
+$databases['default']['default'] = array(
   'database' => 'portalon_one_camp',
   'username' => 'portalon_one_camp',
   'password' => '6sAeEGxhW8&9',

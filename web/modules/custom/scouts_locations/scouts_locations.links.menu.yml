@@ -1,0 +1,7 @@
+scouts_maintenance.admin_index:
+  title: Scouts Maintenance
+  route_name: scouts_maintenance.admin_index
+  parent: scouts.admin_index
+  description: 'Maintenance controller module'
+  position: left
+  weight: -20

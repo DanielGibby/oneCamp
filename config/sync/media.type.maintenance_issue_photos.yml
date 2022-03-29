@@ -1,0 +1,13 @@
+uuid: cb3754e1-4696-4a60-b7fd-3ddfb043c74a
+langcode: en
+status: true
+dependencies: {  }
+id: maintenance_issue_photos
+label: 'Maintenance Issue Photos'
+description: 'Section to hold the maintenance issue photos. Keeping these separate will ensure that only select users will be able to view the images.'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

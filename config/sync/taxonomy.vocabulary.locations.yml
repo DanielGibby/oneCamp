@@ -1,0 +1,8 @@
+uuid: 9817cc43-7381-4113-935b-21ff436447bf
+langcode: en
+status: true
+dependencies: {  }
+name: Locations
+vid: locations
+description: 'A complete list of locations and facilities for the camp.'
+weight: 0

@@ -1,0 +1,17 @@
+uuid: 559b4a86-2fd8-4249-8c9c-03963547b944
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Maintenance Request'
+type: maintenance_request
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

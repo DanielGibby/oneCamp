@@ -1,0 +1,34 @@
+uuid: 3803735b-f101-4e83-aa41-bcb6fc8c1a36
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.locations.field_qr_code
+    - taxonomy.vocabulary.locations
+  module:
+    - qrfield
+    - text
+id: taxonomy_term.locations.default
+targetEntityType: taxonomy_term
+bundle: locations
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_qr_code:
+    type: qrfield_formatter
+    label: hidden
+    settings:
+      display_text: false
+      image:
+        width: '500'
+        height: '500'
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden: {  }

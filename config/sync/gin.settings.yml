@@ -9,16 +9,19 @@ features:
   comment_user_verification: true
   favicon: true
   node_user_picture: true
+logo:
+  path: 'public://one-camp-logo_1.png'
+  use_default: false
 third_party_settings:
   shortcut:
     module_link: true
 preset_accent_color: custom
 preset_focus_color: gin
-enable_darkmode: false
+enable_darkmode: '0'
 classic_toolbar: horizontal
-icon_default: false
-icon_path: 'public://one-camp-logo_1.png'
 high_contrast_mode: false
 accent_color: '#331a57'
 focus_color: ''
+show_description_toggle: false
+show_user_theme_settings: false
 icon_upload: ''

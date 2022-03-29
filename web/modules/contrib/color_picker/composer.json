@@ -1,0 +1,21 @@
+{
+  "name": "drupal/color_picker",
+  "description": "Defines a colour picker Form API element.",
+  "type": "drupal-module",
+  "homepage": "http://drupal.org/project/color_picker",
+  "authors": [
+    {
+      "name": "Scot Hubbard",
+      "email": "scot@scotserve.net",
+      "homepage": "https://www.drupal.org/u/scothubbard",
+      "role": "Maintainer"
+    }
+  ],
+  "support": {
+    "issues": "http://drupal.org/project/color_picker",
+    "source": "https://git.drupalcode.org/project/color_picker"
+  },
+  "license": "GPL-2.0+",
+  "minimum-stability": "dev",
+  "require": {}
+}

@@ -1,0 +1,29 @@
+uuid: ae71e8e5-7feb-4d1f-81f3-b18cc60effb5
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.maintenance_issue_photos.field_media_image
+    - image.style.large
+    - media.type.maintenance_issue_photos
+  module:
+    - image
+id: media.maintenance_issue_photos.default
+targetEntityType: media
+bundle: maintenance_issue_photos
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -68,6 +68,7 @@ function scouts_custom_mail_alter(&$message)
 /**
  * Implements hook_mail().
  */
+/*
 function scouts_custom_mail($key, &$message, $params)
 {
   $options = array(
@@ -82,10 +83,12 @@ function scouts_custom_mail($key, &$message, $params)
       break;
   }
 }
+*/
 
 /**
  * Implements hook_entity_insert().
  */
+/*
 function scouts_custom_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
 {
 
@@ -109,6 +112,7 @@ function scouts_custom_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
     //drupal_set_message(t('Your message has been sent.'));
   }
 }
+*/
 
 
 /**
@@ -175,10 +179,74 @@ function scouts_custom_preprocess_node(&$variables)
 }
 
 /**
+ * Helper function for homepage preprocess page function.
+ */
+
+function scouts_custom_preprocess_page_button_check($settings)
+{
+  $options = [];
+  // Set a config handler.
+  $config = \Drupal::config($settings);
+  // Only add it to the array if its set to show on the homepage
+  if ($config->get('show_on_homepage')) {
+    // Also, we need to check to make sure the current user has the permission to access this module
+
+    // Get the list of accepted users
+    $accepted_users = [];
+    foreach ($config->get('user_access_by_role') as $role => $value) {
+      if ($value) {
+        $accepted_users[] = $value;
+      }
+    }
+
+    $current_user = \Drupal::currentUser();
+    $roles = $current_user->getRoles();
+
+    $is_an_acceptable_role = false;
+    foreach ($roles as $role) {
+      if (in_array($role, $accepted_users)) {
+        $is_an_acceptable_role = TRUE;
+      }
+    }
+
+    if ($is_an_acceptable_role) {
+      $options = [
+        'title' => $config->get('homepage_title'),
+        'link' => $config->get('homepage_link_path'),
+        'icon' => $config->get('homepage_icon'),
+        'default_color' => $config->get('default_color'),
+      ];
+
+      return $options;
+    } else {
+      return false;
+    }
+  }
+}
+
+/**
  * Implements preprocess_page().
  */
 function scouts_custom_preprocess_page(&$variables)
 {
+  // Only process this section if we are on the front page.
+  if ($variables['is_front']) {
+
+    // Set an array to hold the button details
+    $homepage_icons = [];
+
+    // Set a handler for the module handle servvice
+    $moduleHandler = \Drupal::service('module_handler');
+
+    // Now we need to check for modules which have been enabled to decide if they need to have an icon on the homepage.
+    if ($moduleHandler->moduleExists('scouts_maintenance')) {
+      $homepage_icons[] = scouts_custom_preprocess_page_button_check('scouts_custom.scouts_maintenance');
+    }
+
+    // Throw the variables to TWIG.
+    $variables['homepage_icons'] = $homepage_icons;
+  }
+
   // Only process this if we are on a users page.
   if (\Drupal::routeMatch()->getParameter('user')) {
     $user_page = \Drupal::routeMatch()->getParameter('user');

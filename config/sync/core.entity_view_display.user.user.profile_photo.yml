@@ -1,0 +1,79 @@
+uuid: 2c6173be-5b7b-4b90-b9e4-8bb40492d48f
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.user.profile_photo
+    - field.field.user.user.field_additional_information
+    - field.field.user.user.field_address
+    - field.field.user.user.field_contact_number
+    - field.field.user.user.field_date_of_birth
+    - field.field.user.user.field_district
+    - field.field.user.user.field_first_name
+    - field.field.user.user.field_group
+    - field.field.user.user.field_last_name
+    - field.field.user.user.field_membership_number
+    - field.field.user.user.field_middle_name
+    - field.field.user.user.field_qr_code
+    - field.field.user.user.field_region
+    - field.field.user.user.field_section
+    - field.field.user.user.user_picture
+    - image.style.thumbnail
+  module:
+    - field_layout
+    - image
+    - layout_builder
+    - user
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings:
+      label: ''
+  layout_builder:
+    enabled: false
+    allow_custom: false
+_core:
+  default_config_hash: E1qmUI2SlozLlJ308jfMMFKT67l1p6PywE2LTRbeYS4
+id: user.user.profile_photo
+targetEntityType: user
+bundle: user
+mode: profile_photo
+content:
+  field_first_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_last_name:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  user_picture:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: thumbnail
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  field_additional_information: true
+  field_address: true
+  field_contact_number: true
+  field_date_of_birth: true
+  field_district: true
+  field_group: true
+  field_membership_number: true
+  field_middle_name: true
+  field_qr_code: true
+  field_region: true
+  field_section: true
+  member_for: true

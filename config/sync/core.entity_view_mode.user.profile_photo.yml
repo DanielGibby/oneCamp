@@ -1,0 +1,10 @@
+uuid: dbd1e0c5-b45b-4baf-8cd5-6e8a36b4f1fa
+langcode: en
+status: true
+dependencies:
+  module:
+    - user
+id: user.profile_photo
+label: 'Profile Photo'
+targetEntityType: user
+cache: true

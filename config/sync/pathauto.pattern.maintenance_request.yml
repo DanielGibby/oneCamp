@@ -1,0 +1,22 @@
+uuid: 6b02b267-4f76-461a-8cdd-d00586f79cbb
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: maintenance_request
+label: 'Maintenance Request'
+type: 'canonical_entities:node'
+pattern: 'incident-management/maintenance/[node:title]'
+selection_criteria:
+  56f056b3-a1bb-4991-aa6c-c9cd4f3e55e2:
+    id: node_type
+    negate: false
+    uuid: 56f056b3-a1bb-4991-aa6c-c9cd4f3e55e2
+    context_mapping:
+      node: node
+    bundles:
+      maintenance_request: maintenance_request
+selection_logic: and
+weight: -5
+relationships: {  }

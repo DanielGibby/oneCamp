@@ -1,0 +1,22 @@
+uuid: c170400d-c7bd-434a-bba1-19b72bda7248
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: locations
+label: Locations
+type: 'canonical_entities:taxonomy_term'
+pattern: 'admin/locations/[term:name]'
+selection_criteria:
+  e159b49a-eb3d-41ea-ad8d-5d27e0f849d9:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: e159b49a-eb3d-41ea-ad8d-5d27e0f849d9
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      locations: locations
+selection_logic: and
+weight: -5
+relationships: {  }

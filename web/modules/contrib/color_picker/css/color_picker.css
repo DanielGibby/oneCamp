@@ -1,0 +1,29 @@
+.form-type-color-picker .color-values::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.form-type-color-picker .color-value {
+  border: 2px solid transparent;
+  box-sizing: border-box;
+  float: left;
+  height: 32px;
+  margin-right: 10px;
+  padding: 2px;
+  width: 32px;
+}
+
+.form-type-color-picker .color-value:last-child {
+  margin-right: 0;
+}
+
+.form-type-color-picker .color-value .inner {
+  cursor: pointer;
+  height: 24px;
+  width: 24px;
+}
+
+.form-type-color-picker .color-value.selected {
+  border-color: #ff0000;
+}

@@ -1,0 +1,25 @@
+uuid: 72006a05-a611-4dc8-9aac-029618e53601
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:ea186431-904b-4f73-b606-5446d1efcaca'
+  module:
+    - block_content
+  theme:
+    - scouts
+id: footer
+theme: scouts
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:ea186431-904b-4f73-b606-5446d1efcaca'
+settings:
+  id: 'block_content:ea186431-904b-4f73-b606-5446d1efcaca'
+  label: Footer
+  label_display: '0'
+  provider: block_content
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,18 @@
+uuid: 103adf9c-ec9a-4bad-bbb0-547cfc42fdbb
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.maintenance_request
+id: node.maintenance_request.title
+field_name: title
+entity_type: node
+bundle: maintenance_request
+label: 'Brief description'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

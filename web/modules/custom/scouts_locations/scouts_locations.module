@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains scouts_maintenance.module
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpKernel\KernelEvents;
+
+/**
+ * Implements hook_help().
+ */
+function scouts_maintenance_help($route_name, RouteMatchInterface $route_match)
+{
+  switch ($route_name) {
+    case 'help.page.scouts_maintenance':
+      return t('
+        <h2>Help page for the Scouts Custom module</h2>
+        <h3>Instructions</h3>
+      ');
+  }
+}

@@ -1,0 +1,8 @@
+uuid: cf1cac19-ab13-4814-8b08-a91d099e7aa3
+langcode: en
+status: true
+dependencies: {  }
+name: 'Issue Severity'
+vid: issue_severity
+description: 'Used in multiple locations, this will allow users to specify the severity of a particular issue.'
+weight: 0
