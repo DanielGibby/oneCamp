@@ -3,7 +3,7 @@ homepage_title: Maintenance
 homepage_link_path: /incident-management/maintenance
 homepage_icon: 'fas fa-wrench'
 accent_color: '#331a57'
-default_color: '#331a57'
+default_color: '#ff0000'
 user_access_by_role:
   administrator: administrator
   maintenance: maintenance

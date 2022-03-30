@@ -1,40 +1,70 @@
 // Custom Homepage CSS
 $base-purple: #331a57;
+$base-light-grey: #f8f8f8;
+$base-dark-grey: #e7e7e7;
 
-#toolbar-item-administration-tray {
-	width: 100%;
+$default-green: #00A86B;
+
+.container {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
 }
 
-h1, h2, h3, h4, h5, h6 {
-	color: $base-purple;
+#toolbar-item-administration-tray {
+  width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $base-purple;
 }
 
 a {
-	color: $base-purple;
-	&:hover, &:focus {
-		color: $base-purple;
-	}
+  color: $base-purple;
+
+  &:hover,
+  &:focus {
+    color: $base-purple;
+  }
 }
 
 .path-frontpage {
-    h1 {
-        display: none;
-    }
+  h1 {
+    display: none;
+  }
 }
 
 .navbar-brand {
-    display: none;
+  display: none;
 }
 
 .region-navigation {
-    text-align: center;
-    .navbar-btn {
-        float: none !important;
-        img {
-            padding-top: 10px;
-            padding-bottom: 10px;
-        }
+  text-align: center;
+
+  .navbar-btn {
+    float: none !important;
+
+    img {
+      padding-top: 10px;
+      padding-bottom: 10px;
     }
+  }
 }
 
+.views-field-edit-node {
+  text-align: right;
+  width: 5%;
+
+  a {
+    font-size: 2.2em;
+  }
+}
+
+@import '_header';
 @import '_homepage';
+@import '_maintenance';
+@import '_footer';

@@ -1,0 +1,39 @@
+header {
+    margin-bottom: 10px;
+    .container {
+        background-color: $base-light-grey;
+        border-radius: 4px;
+        border: 1px solid $base-dark-grey;
+    }
+
+    .navbar-brand {
+        img {
+            height: 130px;
+            margin-left: 10px;
+        }
+    }
+
+    .views-element-container {
+        float: right;
+        margin-top: 10px;
+        margin-right: 10px;
+
+        font-size: 0.9em;
+
+        .views-field-field-last-name {
+            float: right;
+            margin-left: 5px;
+        }
+        .views-field-field-first-name {
+            float: left;
+        }
+
+        .views-field-user-picture {
+            text-align: center;
+        }
+
+        .views-field-field-membership-number {
+            text-align: right;
+        }
+    }
+}
