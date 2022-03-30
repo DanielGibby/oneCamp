@@ -1,4 +1,33 @@
 'use strict';
+/*
+var gulp = require('gulp');
+// Requires the gulp-sass plugin
+var sass = require('gulp-sass');
+
+const { series } = require('gulp');
+const { watch } = require('gulp');
+
+
+// The `clean` function is not exported so it can be considered a private task.
+// It can still be used within the `series()` composition.
+function clean(cb) {
+
+  return gulp.src('./web/themes/custom/scouts/scss/scouts.scss')
+    .pipe(sass()) // Converts Sass to CSS with gulp-sass
+    .pipe(gulp.dest('./web/themes/custom/scouts/css'))
+
+  cb();
+}
+
+exports.default = function() {
+  // The task will be executed upon startup
+  series(clean)
+  watch('./web/themes/custom/scouts/scss/scouts.scss', gulp.series('sass'), function(cb) {
+    // body omitted
+    cb();
+  });
+};
+*/
 
 var {
   src,
@@ -21,39 +50,10 @@ const {
   doesNotMatch
 } = require('assert');
 
+var gulp = require('gulp');
+
 var location = './web/themes/custom/scouts'
-var scssModulesPath = './web/modules/custom/';
 
-function getFolders(dir) {
-  return fs.readdirSync(dir)
-    .filter(function (file) {
-      return fs.statSync(path.join(dir, file)).isDirectory();
-    });
-}
-
-function buildModulesCss(done) {
-  var folders = getFolders(scssModulesPath);
-  if (folders.length === 0) return done();
-  var tasks = folders.map(function (folder) {
-    var scssPath = folder + '/scss';
-    if (fs.existsSync(scssModulesPath + scssPath)) {
-      console.log('Converting SCSS in ' + scssModulesPath + folder);
-      return pipeline(
-        src(path.join(scssModulesPath, folder, '/**/*.scss')),
-        sass.sync().on('error', sass.logError),
-        cleanCss(),
-        concat(folder + '.css'),
-        rename({
-          suffix: '.min'
-        }),
-        dest(scssModulesPath + folder + '/css'),
-      );
-    }
-  });
-  done();
-}
-
-// Store paths for each site to process SCSS and JS.
 const paths = {
   scss: {
     src: location + '/scss/style.scss',
@@ -73,55 +73,22 @@ const paths = {
 
 // Create tasks for each site to compile SCSS into CSS.
 function buildStyles() {
-  return pipeline(
-    src([paths.scss.src, paths.scss.bootstrap, paths.scss.print]),
-    sourcemaps.init({
-      loadMaps: true
-    }),
-    sourcemaps.identityMap(),
-    sass.sync().on('error', sass.logError),
-    cleanCss(),
-    rename({
-      suffix: '.min'
-    }),
-    sourcemaps.write('./maps'),
-    dest(paths.scss.dest),
-  );
+  console.log('buildStyles called');
+  return gulp.src('web/themes/custom/scouts/scss/scouts.scss')
+  .pipe(sass()) // Converts Sass to CSS with gulp-sass
+  .pipe(gulp.dest('web/themes/custom/scouts/css'))
+
 }
 
-// This will create tasks for each site to move bootstrap/jquery javascript files
-// into the theme's JS folder.
-// As well as minifying global.js
-function buildScripts() {
-  return pipeline(
-    src(paths.js.src),
-    uglify(),
-    rename({
-      suffix: '.min'
-    }),
-    // Copy across Bootstrap and jQuery files from npm source.
-    src([paths.js.bootstrap, paths.js.jquery]),
-    dest(paths.js.dest)
-  );
-}
-
-// Watching SCSS/JS files.
-// TODO: clean up to follow Gulp 4 guidelines.
 function watcher() {
-  console.log('Watching scss/js files');
-
+  console.log('Watching scss files');
   watch([paths.scss.src, paths.scss.watch, paths.scss.print], buildStyles).on('change', function (path) {
     console.log('SCSS changed: ' + path);
-  });
-  watch([paths.js.src, paths.js.watch], buildScripts).on('change', function (path) {
-    console.log('JS changed: ' + path);
   });
 }
 
 exports.build = series(
-  buildModulesCss,
   buildStyles,
-  buildScripts
 );
 exports.default = series(
   exports.build,

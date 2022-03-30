@@ -1,0 +1,64 @@
+#toolbar-item-administration-tray {
+  width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #331a57;
+}
+
+a {
+  color: #331a57;
+}
+a:hover, a:focus {
+  color: #331a57;
+}
+
+.path-frontpage h1 {
+  display: none;
+}
+
+.navbar-brand {
+  display: none;
+}
+
+.region-navigation {
+  text-align: center;
+}
+.region-navigation .navbar-btn {
+  float: none !important;
+}
+.region-navigation .navbar-btn img {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.homepage-tiles {
+  padding-left: 0px;
+}
+.homepage-tiles .homepage-tiles--tile a {
+  display: block;
+  width: 100%;
+  min-height: 210px;
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  transition: all 0.5s;
+}
+.homepage-tiles .homepage-tiles--tile a:hover {
+  background-color: #331a57;
+}
+.homepage-tiles .homepage-tiles--tile a:hover svg {
+  color: white;
+}
+.homepage-tiles .homepage-tiles--tile a:hover span {
+  color: white;
+}
+.homepage-tiles .homepage-tiles--tile a svg {
+  color: #331a57;
+  font-size: 8em;
+}
+.homepage-tiles .homepage-tiles--tile a span {
+  font-size: 1.8em;
+  color: black;
+}

@@ -84,7 +84,7 @@ set footer_classes = ' ' ~
 
 	<div class="row homepage-tiles">
 		{% for button in homepage_icons %}
-			<div style="border: 2px solid {{ button.default_color }};" class="col-lg-3 col-md-4 col-sm-6 homepage-tiles--tile"><a href="{{ button.link }}"><i style="font-color: {{ button.default_color }};" class="{{ button.icon }}"></i><br /><span>{{ button.title }}</span></a></div>
+			<div class="col-lg-3 col-md-4 col-sm-6 homepage-tiles--tile"><a style="border: 2px solid {{ button.default_color }};" href="{{ button.link }}"><i style="font-color: {{ button.default_color }};" class="{{ button.icon }}"></i><br /><span>{{ button.title }}</span></a></div>
 		{% endfor %}
 	</div>
 
