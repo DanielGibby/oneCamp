@@ -1,0 +1,43 @@
+@media print {
+
+  .view-user-profile-block,
+  #block-scouts-local-tasks,
+  .trigger,
+  footer,
+  .region-meta--frontend,
+  .view-content,
+  .pager {
+    display: none;
+  }
+
+  header {
+    .container {
+      border: 0px;
+    }
+  }
+
+  body {
+    border: 10px solid black;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  main {
+    &::after {
+      display: block;
+      width: 85%;
+      margin:0 auto;
+      content: "Use this QR code to log a maintenance request in the portal. Please note: Only selected logged in users can log maintenance requests.";
+    }
+  }
+
+
+  @page {
+    margin: 0 -6cm
+  }
+
+  html {
+    margin: 0 6cm
+  }
+
+}

@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '5769af2ada8062f6ebda879ff2d29d717ba44ab4',
+        'reference' => 'ead91b22a28279a448132d96158763ba6ee53031',
         'name' => 'drupal/recommended-project',
         'dev' => true,
     ),
@@ -883,6 +883,15 @@
                 0 => '9.3.9',
             ),
         ),
+        'drupal/mail_safety' => array(
+            'pretty_version' => '1.2.0',
+            'version' => '1.2.0.0',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../web/modules/contrib/mail_safety',
+            'aliases' => array(),
+            'reference' => '8.x-1.2',
+            'dev_requirement' => false,
+        ),
         'drupal/media' => array(
             'dev_requirement' => false,
             'replaced' => array(
@@ -1027,7 +1036,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '5769af2ada8062f6ebda879ff2d29d717ba44ab4',
+            'reference' => 'ead91b22a28279a448132d96158763ba6ee53031',
             'dev_requirement' => false,
         ),
         'drupal/responsive_image' => array(

@@ -7,9 +7,11 @@ set nav_classes = 'navbar navbar-expand-lg' ~
 
 
 <header>
-	<div class="container no-gutters">
+	<div class="container">
+		{{ drupal_view('user_profile_block', 'user_block', user.id) }}
+
 		{{ page.header }}
-        {{ drupal_view('user_profile_block', 'user_block', user.id) }}
+
 		{% if page.nav_branding or page.nav_main or page.nav_additional %}
 			<nav class="{{ nav_classes }}">
 				<div class="{{ b5_top_container }} d-flex">

@@ -46,20 +46,6 @@ function scouts_custom_preprocess_page_title(&$variables)
 }
 
 /**
- * Implements hook_entity_presave().
- */
-function scouts_custom_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
-{
-  switch ($entity->bundle()) {
-      // Here you modify only your day content type
-    case 'maintenance_request':
-      // Setting the title with the value of field_date.
-
-      break;
-  }
-}
-
-/**
  * Implements hook_mail_alter().
  */
 function scouts_custom_mail_alter(&$message)
@@ -70,7 +56,6 @@ function scouts_custom_mail_alter(&$message)
 /**
  * Implements hook_mail().
  */
-/*
 function scouts_custom_mail($key, &$message, $params)
 {
   $options = array(
@@ -80,41 +65,110 @@ function scouts_custom_mail($key, &$message, $params)
     case 'maintenance_job_created':
       $message['headers']['Content-Type'] = 'text/html; charset=UTF-8; format=flowed';
       $message['from'] = \Drupal::config('system.site')->get('mail');
-      $message['subject'] = t('General mail: @subject', ['@subject' => $params['subject']], $options);
+      $message['subject'] = t('@subject', ['@subject' => $params['subject']], $options);
       $message['body'][] = $params['message'];
       break;
   }
 }
-*/
+
+/**
+ * Implements hook_entity_presave().
+ */
+function scouts_custom_entity_presave(Drupal\Core\Entity\EntityInterface $entity)
+{
+  switch ($entity->bundle()) {
+    case 'maintenance_request':
+      //dump($entity->title->value);
+      //dump($entity->field_status->value);
+
+      //dump('whats being saved');
+      //dump($entity->field_status->value);
+
+      //dump('original data');
+      //dump($entity->original->field_status->value);
+      //exit();
+      break;
+  }
+}
 
 /**
  * Implements hook_entity_insert().
  */
-/*
 function scouts_custom_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
 {
 
-  if ($entity->getEntityTypeId() !== 'node' || ($entity->getEntityTypeId() === 'node' && $entity->bundle() !== 'maintenance_request')) {
-    return;
-  }
+  if ($entity->getEntityTypeId() === 'node' && $entity->bundle() === 'maintenance_request') {
 
-  $mailManager = \Drupal::service('plugin.manager.mail');
-  $module = 'scouts_custom';
-  $key = 'maintenance_job_created';
-  $to = 'dan.gibby@gmail.com';
-  $params['message'] = '<html><body><b><a href="https://portal-onecamp.com/">Message</a></b></body></html>';
-  $params['node_title'] = $entity->label();
-  $langcode = \Drupal::currentUser()->getPreferredLangcode();
-  $send = true;
+    // Run this code when a new Maintenance Request is logged.
+    // We need to see if the job has been logged (which can only be done by admin at creation time)
+    // If so, then we need to email the person its logged to directly to let them know that they have been assigned the job.
 
-  $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
-  if ($result['result'] !== true) {
-    //drupal_set_message(t('There was a problem sending your message and it was not sent.'), 'error');
-  } else {
-    //drupal_set_message(t('Your message has been sent.'));
+    dump($entity->field_assigned_to->value);
+
+    $send_email = false;
+
+    if ($entity->field_assigned_to->value == NULL) {
+      // This means we are saving the form but not assigning it to anyone.
+      // So the job needs to go to the admin staff to let them know.
+
+      $term = \Drupal::entityTypeManager()->getStorage('taxonomy_term')->load($entity->field_severity->target_id);
+
+      // The priority will determin who this request is relayed to.
+      switch ($term->name->value) {
+        case 'maintenance_request':
+          //dump($entity->title->value);
+          //dump($entity->field_status->value);
+
+          //dump('whats being saved');
+          //dump($entity->field_status->value);
+
+          //dump('original data');
+          //dump($entity->original->field_status->value);
+          //exit();
+          break;
+      }
+
+
+
+
+
+
+
+      dump($entity->field_status->value);
+      dump($entity->field_severity->value);
+      dump($entity->field_severity->target_id);
+
+
+
+      // Need to see who the email needs to be sent to.
+      // i.e. if there is a "head of maintenance person" or all users that are admin
+      $to = 'dan.gibby@gmail.com';
+      $params['subject'] = "New Maintenance Issue logged: " . $entity->label();
+      $params['message'] = '<html><body>A new job has been logged which needs to be assigned to someone.</body></html>';
+
+      $send_email = true;
+    }
+
+    exit();
+
+    if ($send_email) {
+      $mailManager = \Drupal::service('plugin.manager.mail');
+      $module = 'scouts_custom';
+      $key = 'maintenance_job_created';
+      $params['node_title'] = $entity->label();
+      $langcode = \Drupal::currentUser()->getPreferredLangcode();
+      $send = true;
+
+      $result = $mailManager->mail($module, $key, $to, $langcode, $params, NULL, $send);
+
+      if ($result['result'] !== true) {
+        // \Drupal::messenger()->addError(t('There was a problem sending your message and it was not sent.'));
+      } else {
+        \Drupal::messenger()->addStatus(t('Your message has been sent.'));
+      }
+    }
   }
 }
-*/
 
 
 /**
@@ -124,6 +178,7 @@ function scouts_custom_preprocess_node(&$variables)
 {
   //dump(\Drupal::routeMatch());
 
+  /*
   $show_event_register_option = false;
 
   if (\Drupal::routeMatch()->getParameter('node')) {
@@ -176,8 +231,10 @@ function scouts_custom_preprocess_node(&$variables)
 
       //dump($variables['render_content']);
     }
+
   }
   $variables['show_event_register_option'] = $show_event_register_option;
+  */
 }
 
 /**

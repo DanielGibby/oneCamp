@@ -12,3 +12,26 @@
         color: $default-green;
     }
 }
+
+.field--name-field-status {
+    font-size: 1.8em;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid red;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.field--name-field-severity {
+    font-size: 1.8em;
+    width: 100%;
+    padding: 10px;
+    border: 3px solid red;
+    text-align: center;
+    display: block;
+    margin-bottom: 10px;
+}
+.views-field-field-assigned-to {
+    width: 5%;
+}

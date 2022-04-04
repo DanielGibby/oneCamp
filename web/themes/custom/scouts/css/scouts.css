@@ -84,6 +84,8 @@ header .views-element-container .views-field-field-membership-number {
 
 .homepage-tiles {
   padding-left: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 .homepage-tiles .homepage-tiles--tile a {
   display: block;
@@ -127,6 +129,66 @@ header .views-element-container .views-field-field-membership-number {
   color: #00A86B;
 }
 
+.field--name-field-status {
+  font-size: 1.8em;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid red;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.field--name-field-severity {
+  font-size: 1.8em;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid red;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.views-field-field-assigned-to {
+  width: 5%;
+}
+
 footer {
   border-top: 1px solid #e7e7e7;
+}
+
+@media print {
+  .view-user-profile-block,
+#block-scouts-local-tasks,
+.trigger,
+footer,
+.region-meta--frontend,
+.view-content,
+.pager {
+    display: none;
+  }
+
+  header .container {
+    border: 0px;
+  }
+
+  body {
+    border: 10px solid black;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  main::after {
+    display: block;
+    width: 85%;
+    margin: 0 auto;
+    content: "Use this QR code to log a maintenance request in the portal. Please note: Only selected logged in users can log maintenance requests.";
+  }
+
+  @page {
+    margin: 0 -6cm;
+  }
+  html {
+    margin: 0 6cm;
+  }
 }
