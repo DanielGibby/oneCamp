@@ -50,6 +50,12 @@ a:hover, a:focus {
   font-size: 2.2em;
 }
 
+.comment-form__title,
+.form-item-subject-0-value,
+#edit-comment-body-0-format {
+  display: none;
+}
+
 header {
   margin-bottom: 10px;
 }

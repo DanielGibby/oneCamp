@@ -51,6 +51,7 @@ module:
   layout_builder: 0
   layout_discovery: 0
   link: 0
+  mail_safety: 0
   media: 0
   media_library: 0
   menu_link_content: 0
@@ -63,6 +64,8 @@ module:
   path_alias: 0
   qrfield: 0
   rdf: 0
+  responsive_image: 0
+  responsive_tables_filter: 0
   scouts_custom: 0
   scouts_maintenance: 0
   search: 0

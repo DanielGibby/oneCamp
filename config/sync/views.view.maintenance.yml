@@ -620,7 +620,7 @@ display:
               responsive: ''
             field_severity:
               sortable: true
-              default_sort_order: asc
+              default_sort_order: desc
               align: ''
               separator: ''
               empty_column: false
@@ -649,6 +649,7 @@ display:
           replica: false
           query_tags: {  }
       relationships: {  }
+      css_class: ''
       header: {  }
       footer: {  }
       display_extenders: {  }
@@ -1090,6 +1091,20 @@ display:
           text: Edit
           output_url_as_text: false
           absolute: false
+      sorts:
+        field_severity_target_id:
+          id: field_severity_target_id
+          table: node__field_severity
+          field: field_severity_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: standard
+          order: DESC
+          expose:
+            label: ''
+            field_identifier: ''
+          exposed: false
       filters:
         status:
           id: status
@@ -1165,6 +1180,7 @@ display:
           1: AND
       defaults:
         fields: false
+        sorts: false
         filters: false
         filter_groups: false
       display_description: ''

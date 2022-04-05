@@ -1,0 +1,14 @@
+uuid: 4626f19e-df3b-4cc8-ab1c-eadfee0a2018
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.leader
+  module:
+    - user
+id: user_add_role_action.leader
+label: 'Add the Leader role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: leader

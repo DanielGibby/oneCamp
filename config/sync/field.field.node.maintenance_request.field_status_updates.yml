@@ -1,0 +1,33 @@
+uuid: 7e5fa0d4-1619-4286-8948-441c6f4f41e1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_status_updates
+    - node.type.maintenance_request
+  module:
+    - comment
+id: node.maintenance_request.field_status_updates
+field_name: field_status_updates
+entity_type: node
+bundle: maintenance_request
+label: 'Status Updates'
+description: 'Used throughout the maintenance request process, this will allow users to add comments to this request as the request is progressed.'
+required: false
+translatable: false
+default_value:
+  -
+    status: 2
+    cid: 0
+    last_comment_timestamp: 0
+    last_comment_name: null
+    last_comment_uid: 0
+    comment_count: 0
+default_value_callback: ''
+settings:
+  default_mode: 1
+  per_page: 50
+  anonymous: 0
+  form_location: true
+  preview: 1
+field_type: comment

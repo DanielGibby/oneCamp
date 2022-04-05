@@ -9,7 +9,9 @@ dependencies:
     - field.field.node.maintenance_request.field_location
     - field.field.node.maintenance_request.field_severity
     - field.field.node.maintenance_request.field_status
+    - field.field.node.maintenance_request.field_status_updates
     - field.field.node.maintenance_request.field_upload_photo
+    - field.field.node.maintenance_request.layout_builder__layout
     - node.type.maintenance_request
   module:
     - text
@@ -37,4 +39,6 @@ hidden:
   field_location: true
   field_severity: true
   field_status: true
+  field_status_updates: true
   field_upload_photo: true
+  layout_builder__layout: true

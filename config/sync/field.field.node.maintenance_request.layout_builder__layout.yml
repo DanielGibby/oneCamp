@@ -1,0 +1,21 @@
+uuid: 61241181-5829-45b3-b23a-72c237ddfb4b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.layout_builder__layout
+    - node.type.maintenance_request
+  module:
+    - layout_builder
+id: node.maintenance_request.layout_builder__layout
+field_name: layout_builder__layout
+entity_type: node
+bundle: maintenance_request
+label: Layout
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: layout_section

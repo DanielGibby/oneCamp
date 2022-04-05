@@ -1,0 +1,9 @@
+uuid: 63d6a820-f4cc-42a6-9c13-2f205e2dfee8
+langcode: en
+status: true
+dependencies: {  }
+id: leader
+label: Leader
+weight: 10
+is_admin: null
+permissions: {  }
