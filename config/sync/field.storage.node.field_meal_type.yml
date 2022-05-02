@@ -1,0 +1,37 @@
+uuid: 73d04ecc-2d80-4995-8f52-423f06ded1b9
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_permissions
+    - node
+    - options
+third_party_settings:
+  field_permissions:
+    permission_type: public
+id: node.field_meal_type
+field_name: field_meal_type
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: breakfast
+      label: Breakfast
+    -
+      value: lunch
+      label: Lunch
+    -
+      value: dinner
+      label: Dinner
+    -
+      value: snack
+      label: Snack
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

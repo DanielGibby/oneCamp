@@ -1,0 +1,21 @@
+uuid: 8e41efe7-9181-4c51-97f7-f85f4acf7e8b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_measurement_type
+    - paragraphs.paragraphs_type.ingredient
+  module:
+    - options
+id: paragraph.ingredient.field_measurement_type
+field_name: field_measurement_type
+entity_type: paragraph
+bundle: ingredient
+label: 'Measurement Type'
+description: 'Add in the type of measurement. For whole items please leave blank.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

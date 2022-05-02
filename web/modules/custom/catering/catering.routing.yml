@@ -1,0 +1,7 @@
+catering.admin_index:
+  path: '/admin/config/scouts/catering'
+  defaults:
+    _form: '\Drupal\catering\Form\Catering'
+    _title: 'Catering Module'
+  requirements:
+    _permission: 'access administration pages'

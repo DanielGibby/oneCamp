@@ -1,0 +1,13 @@
+uuid: 891cd815-ddfd-48f5-bbe5-0d9de8ce0303
+langcode: en
+status: true
+dependencies: {  }
+id: meals
+label: Meals
+description: 'A photo to use for the meal plan card'
+source: image
+queue_thumbnail_downloads: false
+new_revision: true
+source_configuration:
+  source_field: field_media_image
+field_map: {  }

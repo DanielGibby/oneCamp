@@ -1,0 +1,40 @@
+uuid: 97c6fb0b-e2a5-4616-8208-9ab27cda2ed5
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.meal.body
+    - field.field.node.meal.field_allergy_advice
+    - field.field.node.meal.field_ingredient
+    - field.field.node.meal.field_meal_image
+    - field.field.node.meal.field_meal_type
+    - field.field.node.meal.field_method
+    - node.type.meal
+  module:
+    - text
+    - user
+id: node.meal.teaser
+targetEntityType: node
+bundle: meal
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_allergy_advice: true
+  field_ingredient: true
+  field_meal_image: true
+  field_meal_type: true
+  field_method: true

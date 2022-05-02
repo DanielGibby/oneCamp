@@ -1,0 +1,19 @@
+uuid: cffc2352-9e25-4c3d-ab58-897ff999f4e6
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_method
+    - node.type.meal
+id: node.meal.field_method
+field_name: field_method
+entity_type: node
+bundle: meal
+label: Method
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

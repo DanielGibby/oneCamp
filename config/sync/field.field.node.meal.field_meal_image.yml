@@ -1,0 +1,29 @@
+uuid: 766aeb1a-0cb5-4915-8b2a-33a486387714
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meal_image
+    - media.type.meals
+    - node.type.meal
+id: node.meal.field_meal_image
+field_name: field_meal_image
+entity_type: node
+bundle: meal
+label: 'Meal image'
+description: 'Add an image to show on the meal card.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      meals: meals
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

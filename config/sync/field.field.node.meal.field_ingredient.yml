@@ -1,0 +1,37 @@
+uuid: 6fac4373-7025-40b9-ae04-9304f6fbc123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ingredient
+    - node.type.meal
+    - paragraphs.paragraphs_type.ingredient
+  module:
+    - entity_reference_revisions
+id: node.meal.field_ingredient
+field_name: field_ingredient
+entity_type: node
+bundle: meal
+label: Ingredient
+description: 'Add all the ingredients needed to make this meal. Please note: There is no need to include oil which might be needed to make this meal as this will be added to the meal plan automatically.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ingredient: ingredient
+    negate: 0
+    target_bundles_drag_drop:
+      ingredient:
+        weight: 4
+        enabled: true
+      known_medical_conditions:
+        weight: 5
+        enabled: false
+      special_dietary_requirements:
+        weight: 6
+        enabled: false
+field_type: entity_reference_revisions

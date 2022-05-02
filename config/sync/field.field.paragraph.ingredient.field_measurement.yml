@@ -1,0 +1,19 @@
+uuid: a06f949f-6eca-416a-bf4d-4abb1f0d84c9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_measurement
+    - paragraphs.paragraphs_type.ingredient
+id: paragraph.ingredient.field_measurement
+field_name: field_measurement
+entity_type: paragraph
+bundle: ingredient
+label: Measurement
+description: 'This should be a number. For 1/2, 1/4 fractions, please use a decimal (e.g. 0.5, 0.25, 0.75)'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

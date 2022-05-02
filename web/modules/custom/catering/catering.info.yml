@@ -1,0 +1,6 @@
+name: Catering Module
+type: module
+description: 'Controls the functions and features for catering.'
+package: Scouts Custom
+core_version_requirement: ^8.8 || ^9
+configure: catering.form

@@ -1,0 +1,8 @@
+uuid: f3c32ca9-c351-45d2-bce0-c3cf8f7ab660
+langcode: en
+status: true
+dependencies: {  }
+name: 'Food allergies'
+vid: food_allergies
+description: 'A list of foods which potentially will cause an allergic reaction.'
+weight: 0

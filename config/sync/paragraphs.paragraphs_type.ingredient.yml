@@ -1,0 +1,12 @@
+uuid: d32dba0f-7cc8-4dfc-bf0a-300e92a0f42e
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'file:file:bc7bdce5-1a86-4629-8419-15cd628917ca'
+id: ingredient
+label: Ingredient
+icon_uuid: bc7bdce5-1a86-4629-8419-15cd628917ca
+icon_default: 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1NzYgNTEyIj48IS0tIEZvbnQgQXdlc29tZSBQcm8gNS4xNS40IGJ5IEBmb250YXdlc29tZSAtIGh0dHBzOi8vZm9udGF3ZXNvbWUuY29tIExpY2Vuc2UgLSBodHRwczovL2ZvbnRhd2Vzb21lLmNvbS9saWNlbnNlIChDb21tZXJjaWFsIExpY2Vuc2UpIC0tPjxwYXRoIGQ9Ik0yODggMEMxMDggMCAwIDkzLjQgMCAxNjkuMTQgMCAxOTkuNDQgMjQuMjQgMjI0IDY0IDIyNHYyNTZjMCAxNy42NyAxNi4xMiAzMiAzNiAzMmgzNzZjMTkuODggMCAzNi0xNC4zMyAzNi0zMlYyMjRjMzkuNzYgMCA2NC0yNC41NiA2NC01NC44NkM1NzYgOTMuNCA0NjggMCAyODggMHoiLz48L3N2Zz4='
+description: 'Add an ingredient to a meal. This should be based on the needs for 1 person.'
+behavior_plugins: {  }

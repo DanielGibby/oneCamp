@@ -633,7 +633,7 @@ display:
               empty_column: false
               responsive: ''
           override: true
-          sticky: false
+          sticky: true
           summary: ''
           empty_table: false
           caption: ''
@@ -718,7 +718,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<i class="fas fa-times"></i>'
+          empty: '<i class="fas fa-user-circle"></i>'
           hide_empty: false
           empty_zero: true
           hide_alter_empty: true
@@ -1265,7 +1265,7 @@ display:
           element_wrapper_type: ''
           element_wrapper_class: ''
           element_default_classes: true
-          empty: '<i class="fas fa-times"></i>'
+          empty: '<i class="fas fa-user-circle"></i>'
           hide_empty: false
           empty_zero: true
           hide_alter_empty: true

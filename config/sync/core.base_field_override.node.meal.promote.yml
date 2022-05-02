@@ -1,0 +1,22 @@
+uuid: 4602a575-0086-4cc6-8046-8a33136bf949
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.meal
+id: node.meal.promote
+field_name: promote
+entity_type: node
+bundle: meal
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

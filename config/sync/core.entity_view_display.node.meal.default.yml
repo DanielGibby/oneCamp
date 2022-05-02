@@ -1,0 +1,75 @@
+uuid: 0943b06c-35fd-4e5f-a0d2-4e3f650841ab
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.meal.body
+    - field.field.node.meal.field_allergy_advice
+    - field.field.node.meal.field_ingredient
+    - field.field.node.meal.field_meal_image
+    - field.field.node.meal.field_meal_type
+    - field.field.node.meal.field_method
+    - node.type.meal
+  module:
+    - entity_reference_revisions
+    - options
+    - text
+    - user
+id: node.meal.default
+targetEntityType: node
+bundle: meal
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  field_allergy_advice:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: true
+    third_party_settings: {  }
+    weight: 102
+    region: content
+  field_ingredient:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 103
+    region: content
+  field_meal_image:
+    type: entity_reference_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 105
+    region: content
+  field_meal_type:
+    type: list_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 106
+    region: content
+  field_method:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 104
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden: {  }

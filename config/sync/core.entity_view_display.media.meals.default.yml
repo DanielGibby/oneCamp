@@ -1,0 +1,29 @@
+uuid: d5560f94-216b-47d0-bba4-96230fe3e961
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.media.meals.field_media_image
+    - image.style.large
+    - media.type.meals
+  module:
+    - image
+id: media.meals.default
+targetEntityType: media
+bundle: meals
+mode: default
+content:
+  field_media_image:
+    type: image
+    label: visually_hidden
+    settings:
+      image_link: ''
+      image_style: large
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  created: true
+  name: true
+  thumbnail: true
+  uid: true

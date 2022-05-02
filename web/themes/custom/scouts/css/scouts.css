@@ -157,6 +157,10 @@ header .views-element-container .views-field-field-membership-number {
 
 .views-field-field-assigned-to {
   width: 5%;
+  text-align: center;
+}
+.views-field-field-assigned-to .fa-user-circle {
+  font-size: 2em;
 }
 
 footer {

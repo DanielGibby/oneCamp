@@ -128,17 +128,9 @@ function scouts_custom_entity_insert(Drupal\Core\Entity\EntityInterface $entity)
           break;
       }
 
-
-
-
-
-
-
       dump($entity->field_status->value);
       dump($entity->field_severity->value);
       dump($entity->field_severity->target_id);
-
-
 
       // Need to see who the email needs to be sent to.
       // i.e. if there is a "head of maintenance person" or all users that are admin
@@ -299,6 +291,9 @@ function scouts_custom_preprocess_page(&$variables)
     // Now we need to check for modules which have been enabled to decide if they need to have an icon on the homepage.
     if ($moduleHandler->moduleExists('scouts_maintenance')) {
       $homepage_icons[] = scouts_custom_preprocess_page_button_check('scouts_custom.scouts_maintenance');
+    }
+    if ($moduleHandler->moduleExists('catering')) {
+      $homepage_icons[] = scouts_custom_preprocess_page_button_check('scouts_custom.catering');
     }
 
     // Throw the variables to TWIG.

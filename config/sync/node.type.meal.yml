@@ -1,0 +1,17 @@
+uuid: c3d038c8-478c-4059-9b22-72707fad671a
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Meal
+type: meal
+description: 'Add a mean plan to the site so that it can be assigned to a day during the camp.'
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

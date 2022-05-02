@@ -1,0 +1,21 @@
+uuid: 904ede07-1c44-4663-90fa-cb8dc0271062
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_meal_type
+    - node.type.meal
+  module:
+    - options
+id: node.meal.field_meal_type
+field_name: field_meal_type
+entity_type: node
+bundle: meal
+label: 'Meal type'
+description: 'Select the possible options for when this meal can should be served.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

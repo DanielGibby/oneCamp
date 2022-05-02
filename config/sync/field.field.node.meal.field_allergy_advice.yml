@@ -1,0 +1,29 @@
+uuid: b3e118fd-935a-4263-be9d-5495b4db1ac7
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_allergy_advice
+    - node.type.meal
+    - taxonomy.vocabulary.food_allergies
+id: node.meal.field_allergy_advice
+field_name: field_allergy_advice
+entity_type: node
+bundle: meal
+label: 'Allergy Advice'
+description: 'List all the possible ingredients which may cause an allergic reaction.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      food_allergies: food_allergies
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

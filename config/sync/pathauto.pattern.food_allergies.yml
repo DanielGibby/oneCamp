@@ -1,0 +1,22 @@
+uuid: 54bf10c6-a916-474d-9f51-53aa47e0d13d
+langcode: en
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: food_allergies
+label: 'Food allergies'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'admin/food-allergies/[term:name]'
+selection_criteria:
+  988091e0-81e6-475a-b64a-0c46069d3fc5:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 988091e0-81e6-475a-b64a-0c46069d3fc5
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      food_allergies: food_allergies
+selection_logic: and
+weight: -5
+relationships: {  }

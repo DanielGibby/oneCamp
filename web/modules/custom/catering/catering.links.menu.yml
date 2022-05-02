@@ -1,0 +1,7 @@
+catering.admin_index:
+  title: Catering
+  route_name: catering.admin_index
+  parent: scouts.admin_index
+  description: 'catering controller module'
+  position: left
+  weight: -20

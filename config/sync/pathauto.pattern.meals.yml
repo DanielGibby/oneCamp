@@ -1,0 +1,22 @@
+uuid: e6f7bdb5-ba34-4bed-8b5f-f6c022cdd469
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: meals
+label: Meals
+type: 'canonical_entities:node'
+pattern: 'catering/meals/[node:title]'
+selection_criteria:
+  38935075-0b56-47fa-9e4e-62ac336e63e9:
+    id: node_type
+    negate: false
+    uuid: 38935075-0b56-47fa-9e4e-62ac336e63e9
+    context_mapping:
+      node: node
+    bundles:
+      meal: meal
+selection_logic: and
+weight: -5
+relationships: {  }

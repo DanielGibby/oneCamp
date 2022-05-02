@@ -1,37 +1,43 @@
 .views-field-field-severity {
-    width: 19%;
+  width: 19%;
 }
 
 .views-field-created {
-    width: 20%;
+  width: 20%;
 }
 
 .views-field-field-status {
-    svg {
-        font-size: 2.4em;
-        color: $default-green;
-    }
+  svg {
+    font-size: 2.4em;
+    color: $default-green;
+  }
 }
 
 .field--name-field-status {
-    font-size: 1.8em;
-    width: 100%;
-    padding: 10px;
-    border: 3px solid red;
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
+  font-size: 1.8em;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid red;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
 }
 
 .field--name-field-severity {
-    font-size: 1.8em;
-    width: 100%;
-    padding: 10px;
-    border: 3px solid red;
-    text-align: center;
-    display: block;
-    margin-bottom: 10px;
+  font-size: 1.8em;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid red;
+  text-align: center;
+  display: block;
+  margin-bottom: 10px;
 }
+
 .views-field-field-assigned-to {
-    width: 5%;
+  width: 5%;
+  text-align: center;
+
+  .fa-user-circle {
+    font-size: 2em;
+  }
 }

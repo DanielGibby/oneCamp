@@ -1,0 +1,14 @@
+uuid: 182e9c24-025c-476f-b5e4-5e7ca5306313
+langcode: en
+status: true
+dependencies:
+  config:
+    - user.role.catering
+  module:
+    - user
+id: user_add_role_action.catering
+label: 'Add the Catering role to the selected user(s)'
+type: user
+plugin: user_add_role_action
+configuration:
+  rid: catering
